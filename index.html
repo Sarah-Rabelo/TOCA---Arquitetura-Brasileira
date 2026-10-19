@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>TOCA — Hub Nacional de Arquitetura, Design e Arte</title>
+<title>TOCA — hub nacional permanente em formação</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -116,145 +116,295 @@ footer a:hover{color:var(--orange)}
 @media(max-width:520px){.pillars{grid-template-columns:1fr}.pillar{border-left:0;border-top:1px solid var(--orange);padding-top:26px}.pillar:first-child{border-top:0}
  .mosaic{grid-template-rows:180px 140px}.grid{grid-auto-rows:80px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+.lead{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.15;margin:8px 0 16px;color:var(--ivory)}
+.hero h1{font-size:clamp(4rem,10vw,8rem);letter-spacing:.06em}
+.top{align-items:start}.sub{font-size:1.6rem;margin:34px 0 14px;color:var(--ivory)}
+.ls{list-style:none;padding:0;margin:20px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:4px 36px}
+.ls.one{grid-template-columns:1fr}
+.ls li{color:var(--muted);padding:9px 0 9px 22px;position:relative;border-bottom:1px solid rgba(241,90,36,.18)}
+.ls li::before{content:"";position:absolute;left:0;top:20px;width:12px;height:2px;background:var(--orange)}
+.pillars{grid-template-columns:repeat(5,1fr)}
+.pillar b{font-size:1.1rem}
+.cats{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.cats div{font-family:var(--sans);font-size:.95rem;color:var(--muted);line-height:1.5}
+.cats b{font-family:var(--serif);font-size:1.15rem;color:var(--ivory);letter-spacing:.08em}
+.note{font-size:.8rem;letter-spacing:.06em;color:var(--orange);margin-top:18px}
+.grid{margin-top:34px}
+.grid button:nth-child(n){grid-column:span 3;grid-row:span 2}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;max-width:900px}
+form .w{grid-column:1/-1}
+label{display:flex;flex-direction:column;gap:6px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+input,select,textarea{background:var(--deep);border:1px solid rgba(241,90,36,.45);color:var(--ivory);padding:12px;border-radius:3px;font:inherit;font-size:1rem;letter-spacing:0;text-transform:none}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--orange);outline-offset:1px}
+#status{color:var(--ivory);min-height:1.5em}
+.fixcta{display:none}
+@media(max-width:980px){.pillars{grid-template-columns:1fr 1fr}.fixcta{display:block;position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:60;background:var(--orange);color:#fff;text-align:center;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:15px;border-radius:3px;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+ footer{padding-bottom:90px}.hero{padding-top:300px}}
+@media(max-width:620px){form{grid-template-columns:1fr}.pillars{grid-template-columns:1fr}.grid button:nth-child(n){grid-column:span 6}}
 </style>
 </head>
 <body>
 <header>
- <a class="logo" href="#inicio" aria-label="TOCA — início">
-  <svg viewBox="0 0 100 26" fill="none" stroke="#F15A24" stroke-width="1.2"><path d="M2 24 C25 2 75 2 98 24M50 3V24M50 3 30 22M50 3 70 22M50 3 14 20M50 3 86 20"/></svg><span>TOCA</span>
- </a>
+ <a class="logo" href="#inicio" aria-label="TOCA — início"><svg viewBox="0 0 100 26" fill="none" stroke="#F15A24" stroke-width="1.2"><path d="M2 24 C25 2 75 2 98 24M50 3V24M50 3 30 22M50 3 70 22M50 3 14 20M50 3 86 20"/></svg><span>TOCA</span></a>
  <button class="burger" aria-expanded="false" aria-controls="menu" id="burger">Menu</button>
  <nav id="menu" aria-label="Principal"><ul>
-  <li><a href="#inicio">Início</a></li><li><a href="#evento">O evento</a></li><li><a href="#programacao">Programação</a></li><li><a href="#expositores">Expositores</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#local">Local</a></li>
+  <li><a href="#inicio">Início</a></li><li><a href="#projeto">O projeto</a></li><li><a href="#espacos">Espaços</a></li><li><a href="#experiencias">Experiências</a></li><li><a href="#rede">Rede nacional</a></li><li><a href="#participe">Participe</a></li>
  </ul></nav>
- <a class="btn hcta" data-cta href="#">Participe do TOCA</a>
+ <a class="btn hcta" href="#participe">Quero participar</a>
 </header>
 <main>
 <section class="hero" id="inicio">
- <div class="ph" data-img="hero" data-label="Foto: pavilhão em madeira, luz quente" role="img" aria-label="Pavilhão contemporâneo de madeira iluminado ao entardecer, com pessoas circulando"></div>
+ <div class="ph" data-img="hero" data-label="Estado atual · Espaço Santa Maria" role="img" aria-label="Espaço Santa Maria, sede da TOCA em Tiradentes">
+    
+ </div>
  <div class="txt">
-  <p class="eyebrow" style="margin-bottom:0">Arquitetura brasileira</p>
   <svg class="arch" viewBox="0 0 420 70" fill="none" stroke="#F15A24" stroke-width="1.4" aria-hidden="true"><path d="M4 66C70 6 350 6 416 66M210 6V66M210 6 150 64M210 6 270 64M210 6 90 62M210 6 330 62M4 66C70 40 350 40 416 66"/></svg>
-  <h1>Tem uma nova Toca</h1>
-  <h3>Hub nacional em formação</h3>
-  <p class="l1">ARQUITETURA · DESIGN · ARTE</p>
-  <p class="l2">AUTORIA · TECNOLOGIA · NATUREZA</p>
+  <h1>TOCA</h1>
+  <p class="l1">ARQUITETURA · DESIGN · ARTE · AUTORIA · CONSTRUÇÃO · TECNOLOGIA · NATUREZA</p>
+  
   <div class="rule"></div>
-  <p style="max-width:380px">Um espaço permanente de criação, exposição, conteúdo e negócios.</p>
-  <a class="btn" href="#evento">Conheça o projeto</a>
+  <p style="max-width:430px">Uma plataforma de exposição, criação, conteúdo, relacionamento e negócios. A sede começa em Tiradentes. A rede é nacional.</p>
+  <p class="eyebrow" style="margin:18px 0 12px">Formação do primeiro grupo</p>
+  <a class="btn" href="#participe">Quero participar</a>
  </div>
 </section>
 
-<section class="wrap two" id="evento">
- <div class="ph" data-img="sobre" data-label="Foto: ambiente de exposição" role="img" aria-label="Ambiente de exposição arquitetônica com visitantes e peças iluminadas"></div>
- <div>
-  <p class="eyebrow">Sobre o TOCA</p>
-  <h2>Um encontro entre ideias, pessoas e possibilidades.</h2>
-  <p>O TOCA é um hub nacional em formação, criado para conectar profissionais, marcas, estudantes e o público apaixonado por arquitetura, design e arte.</p>
-  <p>Mais do que um evento, é um espaço vivo de criação, exposição, conteúdo e negócios, que valoriza a produção brasileira e impulsiona novas conexões.</p>
+<section class="wrap" id="projeto">
+ <div class="two top">
+  <div><p class="eyebrow">O projeto</p><h2>Conectar quem cria, produz, especifica e vende.</h2></div>
+  <div>
+   <p>A TOCA nasce para conectar arquitetos, designers, artistas, paisagistas, fabricantes, empresas de tecnologia e construção, construtoras, incorporadoras, lojistas, especificadores e polos profissionais de diferentes regiões do Brasil.</p>
+   <p>Produtos, materiais, tecnologias e projetos serão apresentados em ambientes reais, transformados em conteúdo e conectados a profissionais, clientes, lojas e novos mercados.</p>
+   <p>Não é uma feira, uma exposição passageira ou uma loja convencional. É um hub vivo e permanente, com ambientes autorais, exposições renováveis, lançamentos, vernissages, palestras, workshops, reuniões profissionais, hospedagem, produção de conteúdo e geração de negócios ao longo do ano.</p>
+  </div>
+ </div>
+ <h3 class="sub">Por que participar</h3>
+ <p>Cada participação será analisada individualmente e terá escopo, responsabilidades, benefícios e condições formalmente definidos.</p>
+ <ul class="ls" id="why"></ul>
+</section>
+
+<section class="pillars" aria-label="Do território ao mercado" id="como">
+ <div class="pillar"><span class="num">01</span><b>CRIAÇÃO</b><p>Arquitetos, designers, artistas, artesãos e paisagistas.</p></div>
+ <div class="pillar"><span class="num">02</span><b>PRODUÇÃO</b><p>Fabricantes, indústrias, oficinas, construtoras e empresas de tecnologia.</p></div>
+ <div class="pillar"><span class="num">03</span><b>APRESENTAÇÃO</b><p>Ambientes reais, intervenções, exposições, lançamentos, revista e conteúdo audiovisual.</p></div>
+ <div class="pillar"><span class="num">04</span><b>RELACIONAMENTO</b><p>Profissionais, especificadores, clientes, investidores, lojas, construtoras e polos.</p></div>
+ <div class="pillar"><span class="num">05</span><b>COMERCIALIZAÇÃO</b><p>Atendimento físico, Arqtreko Design e lojas credenciadas.</p></div>
+</section>
+
+<section class="wrap">
+ <div class="two top">
+  <div><p class="eyebrow">Construção e mercado imobiliário</p><h2>Do território ao mercado.</h2></div>
+  <div>
+    <!--<p>A TOCA reúne criação, produção, apresentação, relacionamento e 
+    comercialização: uma ideia pode nascer no território, ser desenvolvida 
+    com autores e fabricantes, apresentada em ambiente real e alcançar projetos, 
+    lojas e compradores em outras regiões.</p>
+    -->
+    
+   <p>A TOCA aproxima escritórios de arquitetura e interiores, construtoras, 
+    incorporadoras, investidores, fabricantes, engenheiros e fornecedores. 
+    A rede poderá apresentar construção industrializada, steel frame, sistemas 
+    modulares, contêineres, construção em bambu, materiais naturais, iluminação, 
+    energia, automação, pisos, revestimentos, paisagismo e soluções para áreas 
+    externas.</p>
+
+   <p>Essa conexão poderá gerar ambientes-modelo, projetos especiais, 
+    capacitações, desenvolvimento de produtos, especificações e parcerias 
+    comerciais.</p>
+  </div>
+ </div>
+</section>
+ 
+<section class="wrap exh" id="sede">
+ <div class="two">
+  <div class="ph" data-img="sede" data-label="Estado atual · Pacu, Tiradentes" role="img" aria-label="Entrada do Espaço Santa Maria no Pacu, Tiradentes">
+     
+  </div>
+  <div>
+   <p class="eyebrow">Uma sede estratégica em Tiradentes</p>
+   <h2>Tiradentes não será o limite. Será o ponto de partida.</h2>
+   <p>A primeira sede da TOCA será implantada no Espaço Santa Maria, no bairro Pacu, portal de chegada a Tiradentes pela Estrada Real e aos pés da Serra de São José.</p>
+   <p>Tiradentes reúne patrimônio, arquitetura, gastronomia, arte, design, natureza, turismo e circulação de profissionais e visitantes de diferentes partes do país. A TOCA parte dessa força territorial para construir uma rede maior de criação, relacionamento e negócios.</p>
+  </div>
  </div>
 </section>
 
-<section class="pillars" aria-label="Pilares do TOCA">
- <div class="pillar"><svg viewBox="0 0 54 54"><path d="M27 6 46 16v22L27 48 8 38V16zM8 16l19 10 19-10M27 26v22"/></svg><span class="num">01</span><b>ARQUITETURA</b><p>Projetos, tendências e novas formas de habitar o mundo.</p></div>
- <div class="pillar"><svg viewBox="0 0 54 54"><path d="M18 8h18l2 22H16zM16 30h22M18 30l-4 16M36 30l4 16M20 38h14M18 8c-3 6-3 14 0 22"/></svg><span class="num">02</span><b>DESIGN</b><p>Funcionalidade, estética e inovação em todas as escalas.</p></div>
- <div class="pillar"><svg viewBox="0 0 54 54"><rect x="9" y="8" width="36" height="38"/><rect x="14" y="13" width="26" height="28"/><circle cx="21" cy="22" r="3"/><path d="M14 38l9-9 7 6 5-5 5 6"/></svg><span class="num">03</span><b>ARTE</b><p>Expressões que conectam cultura, território e pessoas.</p></div>
- <div class="pillar"><svg viewBox="0 0 54 54"><path d="M27 48V26M27 30C27 20 19 16 12 16c0 9 6 14 15 14zM27 26C27 16 34 11 42 11c0 9-6 15-15 15zM18 48h18"/></svg><span class="num">04</span><b>NATUREZA</b><p>Soluções sustentáveis e um futuro mais possível.</p></div>
-</section>
-
-<section class="wrap exp" id="programacao">
- <div>
-  <p class="eyebrow">A experiência</p>
-  <h2>Um espaço completo para viver, criar e se conectar.</h2>
-  <p>O TOCA reúne exposições, palestras, workshops, rodadas de negócios e experiências imersivas, em um ambiente que inspira e movimenta o ecossistema criativo brasileiro.</p>
-  <a class="btn ghost" href="#expositores">Saiba mais</a>
- </div>
- <div class="mosaic">
-  <div class="ph" data-img="exp1" data-label="Foto: ambientes expositivos" role="img" aria-label="Ambiente expositivo com visitantes"></div>
-  <div class="ph" data-img="exp2" data-label="Foto: palestras e encontros" role="img" aria-label="Plateia assistindo a uma palestra"></div>
-  <div class="ph" data-img="exp3" data-label="Foto: mobiliário autoral" role="img" aria-label="Poltrona de madeira e palha, peça de design autoral"></div>
+<section class="wrap">
+ <p class="eyebrow">As intervenções começam aqui</p>
+ <h2>Uma transformação real, etapa por etapa.</h2>
+ <div class="two top">
+  <p>A primeira etapa começa com uma intervenção urbana, artística e paisagística na rua e no entorno do Espaço Santa Maria, no Pacu. De maneira gradual e autorizada, o projeto poderá reunir fachadas e muros, paisagismo, iluminação, arte e muralismo, tintas e materiais naturais, pisos e revestimentos, sinalização autoral, mobiliário urbano, acessibilidade, circulação, instalações temporárias e soluções construtivas e tecnológicas.</p>
+  <p>A proposta é demonstrar como arquitetura, arte, construção, indústria, autoria e natureza podem transformar um território real. Cada etapa poderá ser registrada em fotografias, entrevistas e vídeos. As ações dependerão das autorizações dos responsáveis e, quando necessário, dos órgãos competentes.</p>
  </div>
 </section>
 
-<section class="wrap exh" id="expositores">
- <p class="eyebrow">Expositores e oportunidades</p>
- <h2>IDEIAS QUE GANHAM ESPAÇO.</h2>
- <p style="max-width:620px">Um ambiente para apresentar projetos, compartilhar conhecimento, criar conexões e ampliar as possibilidades da produção brasileira.</p>
- <div class="cats" id="cats"></div>
- <a class="btn" data-link="expositores" href="#">Quero fazer parte</a>
-</section>
-
-<section class="wrap gal" id="galeria">
+<section class="wrap exh" id="espacos">
+ <p class="eyebrow">Espaço Santa Maria</p>
+ <h2>A sede física, em exposição permanente.</h2>
+ <p style="max-width:760px">O Espaço Santa Maria será a sede física, o principal núcleo de exposição permanente e o endereço de relacionamento e negócios da TOCA. O imóvel será transformado gradualmente em uma mostra viva, na qual mobiliário, arte, iluminação, materiais, tecnologia, paisagismo e soluções construtivas serão apresentados em situações reais de uso.</p>
+ <ul class="ls" id="sm"></ul>
+ <h3 class="sub">Ambientes da TOCA</h3>
+ <div class="cats" id="amb"></div>
  <div class="grid" id="grid"></div>
- <div>
-  <p class="eyebrow">Galeria</p>
-  <h2>Veja um pouco do que te espera.</h2>
-  <p>Uma visão dos espaços, das ideias e das possibilidades que inspiram o universo do TOCA.</p>
+ <p class="note">Fotografias identificadas como ESTADO ATUAL. Imagens que mostram possibilidades levam a legenda VISÃO CONCEITUAL e não representam projeto executivo.</p>
+</section>
+
+<section class="wrap" id="experiencias">
+ <div class="two top">
+  <div>
+   <p class="eyebrow">Experiências e programação permanente</p>
+   <h2>Uma agenda contínua, ao longo do ano.</h2>
+   <p>A programação poderá reunir vernissages, exposições, palestras, workshops, oficinas, lançamentos de produtos e coleções, apresentações de materiais e tecnologias, encontros com fabricantes, reuniões com construtoras e incorporadoras, experiências gastronômicas, visitas guiadas, imersões criativas, residências artísticas, encontros de especificação, entrevistas, fotografias e vídeos.</p>
+   <p>As atividades poderão acontecer no Espaço Santa Maria, na Casa da Mata, nos Pontos TOCA e, mediante autorização, em espaços do centro histórico.</p>
+  </div>
+  <div>
+   <h3 class="sub" style="margin-top:0">Reuniões, escritórios e imersões</h3>
+   <p>A TOCA oferecerá espaços temporários para empresas, escritórios e equipes que desejem trabalhar em Tiradentes, desenvolver projetos, receber convidados ou realizar encontros profissionais: escritórios temporários, salas individuais, sala de reunião com vista para a Serra de São José, biblioteca de materiais, apoio para reuniões virtuais e ambientes para entrevistas, fotografias e vídeos.</p>
+   <p>Reserva por horas, dias ou períodos maiores, conforme disponibilidade, combinando trabalho, hospedagem, alimentação, visitas e programação cultural, no Espaço Santa Maria ou em locais conveniados.</p>
+   <h3 class="sub">Casa da Mata</h3>
+   <p>Núcleo dedicado ao fazer, à pesquisa, às oficinas e às experiências ligadas à natureza: oficinas, construção em bambu, experimentações com terra, fibras e materiais naturais, protótipos, imersões criativas, residências e pequenos eventos. Sua implantação dependerá da formalização de uso, avaliação técnica e adequações estruturais e de segurança.</p>
+  </div>
  </div>
 </section>
 
-<section class="cta" id="local">
+<section class="wrap exh" id="rede">
+ <p class="eyebrow">Rede territorial e nacional</p>
+ <h2>Pontos TOCA, polos e lojas credenciadas.</h2>
+ <div class="two top">
+  <div>
+   <h3 class="sub" style="margin-top:0">Pontos TOCA e circuito territorial</h3>
+   <p>Restaurantes, pousadas, lojas, ateliês e espaços culturais poderão integrar o circuito como Pontos TOCA, recebendo obras e produtos autorais, pequenas exposições, instalações, lançamentos, conversas, experiências gastronômicas, apresentações culturais, publicações, sinalização e QR Codes.</p>
+   <p>A sede será o começo de um circuito curado que poderá envolver Tiradentes, São João del-Rei, Santa Cruz de Minas, Prados, Bichinho, Coronel Xavier Chaves e outros territórios do Campo das Vertentes. A expansão será gradual; nenhum local, empresa ou cidade será anunciado antes de sua confirmação.</p>
+  </div>
+  <div>
+   <h3 class="sub" style="margin-top:0">Conexão nacional e polos de arquitetura</h3>
+   <p>A TOCA pretende conectar sua sede, seus projetos e seus participantes a polos de arquitetura e decoração, lojas credenciadas, escritórios, construtoras, incorporadoras, fabricantes, profissionais e compradores de diferentes regiões.</p>
+   <p>A proposta não é competir com as lojas estabelecidas. A TOCA cria desejo, conteúdo, relacionamento e oportunidades. A Arqtreko Design registra e conecta os contatos. A loja credenciada poderá atender o cliente e concluir a venda em sua região.</p>
+   <p><b>Núcleos Arqtreko Design:</b> lojas selecionadas poderão receber mobiliário interno e externo da Cipoh Brasil, luminárias, objetos, arte, tapetes, têxteis, materiais, catálogos, amostras e QR Codes, como extensão regional da TOCA.</p>
+  </div>
+ </div>
+</section>
+
+<section class="wrap" id="arqtreko">
+ <div class="two top">
+  <div>
+   <p class="eyebrow">Arqtreko Design e comercialização</p>
+   <h2>A experiência física continua no digital.</h2>
+   <p>A Arqtreko Design será a plataforma editorial, digital e comercial conectada à TOCA. Reunirá produtos, marcas e autores, ambientes, projetos, vídeos, entrevistas, registros das intervenções, agenda, revista, cadastro de profissionais, conexão com lojas e polos, pedidos de orçamento e oportunidades comerciais.</p>
+   <p>Assim, produtos e projetos podem ser conhecidos, especificados e comercializados em outras regiões.</p>
+   <h3 class="sub">Cipoh Brasil</h3>
+   <p>Marca fundadora e âncora da TOCA. Seu mobiliário autoral é apresentado em diálogo com arte, iluminação, materiais, tecnologia, têxteis, paisagismo e criação brasileira. A TOCA também poderá desenvolver peças e coleções em colaboração com arquitetos, designers, artistas, artesãos e fabricantes, com autoria, propriedade intelectual, custos, royalties, comissão, prazo e condições de comercialização definidos previamente.</p>
+  </div>
+  <div>
+   <h3 class="sub" style="margin-top:0">Revista Arqtreko Design TOCA</h3>
+   <p>Publicação editorial, apresentação institucional, registro da transformação, mapa do circuito, catálogo inteligente, ferramenta comercial e espaço para parceiros e patrocinadores. Circulará entre escritórios, construtoras, incorporadoras, lojas, polos, hotéis, pousadas, restaurantes, espaços culturais e eventos.</p>
+   <p>Conteúdos: manifesto da TOCA, Pacu, Estrada Real e Serra de São José, transformação do Espaço Santa Maria, intervenção da rua, ambientes assinados, Cipoh Brasil em uso, artistas e autores, materiais, tecnologia, construção, sustentabilidade, entrevistas, produtos, mapa, agenda, parceiros e QR Codes. Conteúdos patrocinados serão identificados.</p>
+  </div>
+ </div>
+</section>
+
+<section class="wrap exh" id="formacao">
+ <p class="eyebrow">Formação, pesquisa e novos autores · frente futura</p>
+ <h2>Em etapa posterior, novos autores.</h2>
+ <div class="two top">
+  <p>A TOCA poderá desenvolver ações formativas com universidades, escolas de arquitetura e design, escolas técnicas, centros de formação e instituições de pesquisa: oficinas, concursos, pesquisas de materiais, protótipos, residências criativas, visitas técnicas, projetos experimentais e encontros entre novos profissionais, autores, fabricantes e indústrias.</p>
+  <p>Os resultados poderão ser apresentados nos ambientes e conteúdos da TOCA e, quando houver viabilidade, conectados à produção e à comercialização pela Arqtreko Design. Antes de cada projeto serão definidos autoria, propriedade intelectual, responsabilidades, custos, royalties e condições de uso e venda.</p>
+ </div>
+</section>
+
+<section class="wrap" id="participe">
+ <p class="eyebrow">Como participar</p>
+ <h2>Formação do primeiro grupo.</h2>
+ <p style="max-width:760px">O primeiro grupo participará da formação da identidade, dos ambientes, das intervenções e das primeiras conexões da TOCA. Os selecionados poderão integrar o registro fundador, apresentar produtos em ambientes reais, construir casos de aplicação, participar dos primeiros conteúdos e lançamentos, desenvolver colaborações, integrar a revista e acompanhar a expansão da rede. A participação não será automática: haverá análise de afinidade, qualidade, autoria, capacidade de execução e coerência com o projeto.</p>
+ <div class="two top" style="margin-top:30px">
+  <div><h3 class="sub" style="margin-top:0">Quem pode participar</h3><ul class="ls one" id="quem"></ul></div>
+  <div><h3 class="sub" style="margin-top:0">Formas de participação</h3><ul class="ls one" id="formas"></ul>
+  <p class="note">Cada participação será analisada individualmente e terá escopo, responsabilidades, benefícios, contrapartidas e condições definidos formalmente.</p></div>
+ </div>
+ 
+ <h3 class="sub">Como você quer participar da TOCA?</h3>
+ <div style="margin-top: 30px;">
+  <p>Quer conhecer melhor o projeto ou conversar sobre possibilidades de participação?</p>
+  <a
+    class="btn"
+    href="https://wa.me/5519991548621?text=Olá!%20Quero%20conhecer%20a%20TOCA."
+    target="_blank"
+    rel="noopener"
+  >
+    Fazer Incrição pelo WhatsApp
+  </a>
+</div>
+</section>
+
+<section class="cta">
  <svg class="bg" viewBox="0 0 560 300" fill="none" stroke="#F15A24" stroke-width="1.3" aria-hidden="true"><path d="M0 290C120 40 360 20 560 120M0 290 L280 0M0 290 L190 20M0 290 L380 40M0 290 L90 60M0 290 L480 90M0 290C120 200 360 190 560 220"/></svg>
  <div class="in">
-  <p class="eyebrow">Faça parte dessa história</p>
-  <h2>O TOCA é para todos.</h2>
-  <p>Seja você um profissional, estudante, artista, criativo ou simplesmente alguém que acredita no poder da cultura e da inovação para transformar o presente e o futuro.</p>
-  <a class="btn" data-link="inscricao" href="#">Participe do TOCA</a>
+  <h2 style="font-size:clamp(1.6rem,3.6vw,2.7rem)">A TRANSFORMAÇÃO COMEÇA NO PACU.</h2>
+  <a class="btn" href="#participe">Quero participar</a>
  </div>
 </section>
 </main>
 
 <footer>
  <a class="logo" href="#inicio" aria-label="TOCA — início"><svg viewBox="0 0 100 26" fill="none" stroke="#F15A24" stroke-width="1.2"><path d="M2 24 C25 2 75 2 98 24M50 3V24M50 3 30 22M50 3 70 22"/></svg><span>TOCA</span></a>
- <ul><li><a href="#inicio">Início</a></li><li><a href="#evento">O evento</a></li><li><a href="#programacao">Programação</a></li><li><a href="#expositores">Expositores</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#local">Local</a></li></ul>
- <div class="soc">
-  <a data-link="instagram" href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F15A24" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="#F15A24"/></svg></a>
-  <a data-link="linkedin" href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F15A24" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13c0-4 5-4 5 0v4"/></svg></a>
- </div>
- <div class="small"><span id="loc"></span><span id="inst"></span></div>
+ <ul><li><a href="#inicio">Início</a></li><li><a href="#projeto">O projeto</a></li><li><a href="#espacos">Espaços</a></li><li><a href="#experiencias">Experiências</a></li><li><a href="#rede">Rede nacional</a></li><li><a href="#participe">Participe</a></li></ul>
+ <div class="soc"><a id="wa2" href="#" target="_blank" rel="noopener">WhatsApp (19) 99154-8621</a></div>
+ <div class="small"><span>TOCA — hub nacional permanente em formação</span><span>Espaço Santa Maria · Pacu · Tiradentes · Minas Gerais</span><span>Cipoh Brasil · Arqtreko Design</span></div>
+ <div class="small"><span style="text-transform:none;letter-spacing:0">TOCA — concepção, idealização e curadoria geral: Márcia Fabiano. O conteúdo, a identidade e os materiais deste projeto não poderão ser reproduzidos ou adaptados sem autorização expressa.</span></div>
 </footer>
+<a class="fixcta" href="#participe">Quero participar</a>
 
-<dialog id="lb" aria-label="Galeria ampliada">
+<dialog id="lb" aria-label="Espaços ampliados">
  <div class="ph" id="lbimg"></div>
  <div class="bar"><button id="prev">← Anterior</button><span id="cap"></span><button id="next">Próxima →</button><button id="close">Fechar</button></div>
 </dialog>
 
 <script>
-/* ===== CONFIGURAÇÃO — troque aqui fotos, links e textos ===== */
 const CONFIG={
- images:{ /* coloque a URL ou caminho da foto oficial; vazio = espaço reservado */
-  hero:"",sobre:"",exp1:"",exp2:"",exp3:""},
- gallery:[ /* adicione ou remova itens livremente: {src, alt} */
-  {src:"",alt:"Arquitetura contemporânea brasileira ao entardecer"},
-  {src:"",alt:"Detalhes construtivos em madeira"},
-  {src:"",alt:"Obras de arte em espaço de exposição"},
-  {src:"",alt:"Ambiente cultural com iluminação acolhedora"},
-  {src:"",alt:"Mobiliário e objetos autorais"},
-  {src:"",alt:"Visitantes circulando entre os expositores"}],
- links:{inscricao:"",expositores:"",instagram:"",linkedin:""}, /* "" = ainda sem destino */
- local:"Espaço Santa Maria · Tiradentes · MG",
- instituicao:"CIPOH BRASIL · ARQTREKODESIGN",
- categorias:["Arquitetura e urbanismo","Mobiliário e design","Arte e objetos","Iluminação","Materiais e revestimentos","Tecnologia construtiva","Paisagismo e áreas externas"]
+ whatsapp:"5519991548621",
+ formEndpoint:"", /* URL do serviço que recebe o formulário (e envia a confirmação automática) */
+ images:{hero:"./casaSantaMaria.jpeg",sede:"./casaSantaMaria.jpeg"},
+ gallery:[ /* tag: "ESTADO ATUAL" ou "VISÃO CONCEITUAL" */
+  {src:"./casaSantaMaria.jpeg",alt:"Fachada e rua do Espaço Santa Maria",tag:"ESTADO ATUAL"},
+  {src:"./corredor.jpg",alt:"Corredor de chegada",tag:"ESTADO ATUAL"},
+  {src:"./deck.jpeg",alt:"Deck e piscina",tag:"ESTADO ATUAL"},
+  {src:"./salao.jpg",alt:"Salão e cozinha",tag:"ESTADO ATUAL"}],
+ why:["Produtos e soluções apresentados em ambientes reais.","Relacionamento com arquitetos, designers e especificadores.","Aproximação com construtoras, incorporadoras, lojas e investidores.","Fotografias, vídeos, entrevistas e casos reais de aplicação.","Lançamentos, encontros profissionais e ações editoriais.","Presença na plataforma Arqtreko Design e na revista.","Conexão com lojas credenciadas e polos de arquitetura.","Desenvolvimento de produtos e coleções em colaboração.","Oportunidades de especificação, representação e venda.","Participação nos futuros circuitos e projetos da rede."],
+ sm:["Ambientes assinados e exposições renováveis.","Produtos para especificação e venda.","Lançamentos, vernissages, palestras e workshops.","Reuniões profissionais e apresentações de projetos.","Experiências gastronômicas e produção de conteúdo.","Hospedagem e atendimento a profissionais, empresas e clientes."],
+ ambientes:[["Fachada e rua","iluminação, paisagismo, arte, tintas, revestimentos, sinalização e soluções construtivas."],["Corredor de chegada","pisos, cobertura, iluminação, materiais, arte, paisagismo e acessibilidade."],["Casas autorais","Casa da Luz; Casa dos Materiais; Casa dos Objetos e do Garimpo Autoral; Casa dos Têxteis."],["Deck e piscina","mobiliário externo, tapetes, vasos, paisagismo, esculturas, iluminação, água e fogo, pergolados, coberturas e tecnologias para áreas externas."],["Salão e cozinha","exposições, mobiliário e objetos autorais, encontros, lançamentos, palestras, workshops e experiências gastronômicas."],["Mezanino","biblioteca de materiais, especificação, conteúdo e pequenas reuniões."],["Escritórios e salas reservadas","espaços para profissionais, empresas, clientes, construtoras, incorporadoras e investidores."]],
+ quem:["Arquitetos, urbanistas, designers e paisagistas.","Artistas, artesãos e autores.","Fabricantes, indústrias e fornecedores.","Empresas de tecnologia, engenharia e construção.","Construtoras, incorporadoras e investidores.","Lojas, polos profissionais e especificadores.","Restaurantes, pousadas e espaços culturais.","Empresas de turismo, hospitalidade, gastronomia e produção.","Parceiros editoriais e institucionais.","Em etapa futura: universidades, escolas técnicas, centros de formação e pesquisa."],
+ formas:["Parceiro fundador.","Patrocinador técnico.","Ambiente ou núcleo adotado.","Expositor permanente.","Arquiteto ou paisagista responsável.","Artista ou autor convidado.","Parceiro de evento ou da intervenção.","Ponto TOCA.","Loja credenciada.","Parceiro editorial ou institucional."],
+ perfis:["Arquiteto ou urbanista","Designer","Paisagista","Artista ou artesão","Fabricante ou fornecedor","Empresa de tecnologia ou construção","Construtora ou incorporadora","Loja ou polo","Restaurante, pousada ou espaço cultural","Patrocinador ou parceiro institucional","Palestrante ou responsável por workshop","Empresa interessada em reunião ou imersão","Visitante ou cliente","Instituição de ensino, professor ou pesquisador"],
+ obrigado:"Obrigado pelo interesse na TOCA. Nossa equipe analisará seu cadastro e entrará em contato para apresentar as possibilidades de participação mais adequadas ao seu perfil."
 };
-/* ===== fim da configuração ===== */
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 function fill(el,src,alt){if(src){const i=new Image();i.src=src;i.alt=alt||"";i.loading="lazy";el.innerHTML="";el.appendChild(i);el.classList.add("has")}}
 $$("[data-img]").forEach(e=>fill(e,CONFIG.images[e.dataset.img],e.getAttribute("aria-label")));
-$("#cats").innerHTML=CONFIG.categorias.map((c,i)=>`<div><i>${String(i+1).padStart(2,"0")}</i>${c}</div>`).join("");
-$("#loc").textContent=CONFIG.local;$("#inst").textContent=CONFIG.instituicao;
-const labels=["Arquitetura","Madeira","Arte","Ambiente cultural","Design autoral","Encontros"];
-$("#grid").innerHTML=CONFIG.gallery.map((g,i)=>`<button data-i="${i}" aria-label="Ampliar: ${g.alt}"><div class="ph" data-label="${labels[i]||"Foto"}"></div></button>`).join("");
-$$("#grid .ph").forEach((p,i)=>fill(p,CONFIG.gallery[i].src,CONFIG.gallery[i].alt));
-/* links: sem URL configurada, o botão fica inerte (nenhum envio simulado) */
-function link(el,k){const u=CONFIG.links[k];if(u){el.href=u}else{el.addEventListener("click",e=>e.preventDefault());el.setAttribute("aria-disabled","true");el.title="Link em breve"}}
-$$("[data-link]").forEach(e=>link(e,e.dataset.link));$$("[data-cta]").forEach(e=>link(e,"inscricao"));
+const li=a=>a.map(t=>`<li>${t}</li>`).join("");
+$("#why").innerHTML=li(CONFIG.why);$("#sm").innerHTML=li(CONFIG.sm);$("#quem").innerHTML=li(CONFIG.quem);$("#formas").innerHTML=li(CONFIG.formas);
+$("#amb").innerHTML=CONFIG.ambientes.map((a,i)=>`<div><i>${String(i+1).padStart(2,"0")}</i><span><b>${a[0].toUpperCase()}</b> — ${a[1]}</span></div>`).join("");
+$("#perfil").innerHTML='<option value="">Selecione</option>'+CONFIG.perfis.map(p=>`<option>${p}</option>`).join("");
+$("#perfil").onchange=e=>{$("#colab").hidden=!/instituição/i.test(e.target.value)};
+/* WhatsApp e origem do contato (use ?origem=qr-banner no endereço do QR Code) */
+const wa=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("Olá! Quero conhecer a TOCA e participar.")}`;
+$("#wa").href=wa;$("#wa2").href=wa;
+let org="direto";try{org=new URLSearchParams(location.search).get("origem")||document.referrer||"direto"}catch(e){}
+$("#origem").value=org;
+$("#form").addEventListener("submit",async e=>{e.preventDefault();const f=e.target,st=$("#status");
+ if(!f.checkValidity()){f.reportValidity();return}
+ if(!CONFIG.formEndpoint){st.textContent="O envio automático ainda não foi configurado. Fale conosco pelo WhatsApp.";return}
+ try{const r=await fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(Object.fromEntries(new FormData(f)))});
+  if(!r.ok)throw 0;st.textContent=CONFIG.obrigado;f.reset()}catch(_){st.textContent="Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp."}});
 /* menu mobile */
 const b=$("#burger"),m=$("#menu");
 b.onclick=()=>{const o=m.classList.toggle("open");b.setAttribute("aria-expanded",o)};
 m.addEventListener("click",e=>{if(e.target.tagName==="A"){m.classList.remove("open");b.setAttribute("aria-expanded",false)}});
-/* lightbox */
+/* espaços + lightbox */
+const G=CONFIG.gallery;
+$("#grid").innerHTML=G.map((g,i)=>`<button data-i="${i}" aria-label="Ampliar: ${g.alt}"><div class="ph" data-label="${g.tag} · ${g.alt}"></div></button>`).join("");
+$$("#grid .ph").forEach((p,i)=>fill(p,G[i].src,G[i].alt));
 const lb=$("#lb");let cur=0;
-function show(i){const n=CONFIG.gallery.length;cur=(i+n)%n;const g=CONFIG.gallery[cur],box=$("#lbimg");box.className="ph";box.innerHTML="";box.dataset.label=labels[cur]||"Foto";fill(box,g.src,g.alt);$("#cap").textContent=g.alt}
+function show(i){cur=(i+G.length)%G.length;const g=G[cur],box=$("#lbimg");box.className="ph";box.innerHTML="";box.dataset.label=g.tag;fill(box,g.src,g.alt);$("#cap").textContent=g.tag+" · "+g.alt}
 $("#grid").addEventListener("click",e=>{const bt=e.target.closest("button");if(!bt)return;show(+bt.dataset.i);lb.showModal()});
 $("#prev").onclick=()=>show(cur-1);$("#next").onclick=()=>show(cur+1);$("#close").onclick=()=>lb.close();
 lb.addEventListener("click",e=>{if(e.target===lb)lb.close()});
